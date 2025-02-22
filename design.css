@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #333;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: rgb(236, 236, 236); /* Ensures it's always visible */
+  position: fixed; /* Keeps it at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it appears above other elements */
+  transition: all 0.3s ease-in-out;
+}
+.navbar.shrink {
+  padding: 10px 5%; /* Smaller padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 {
+  font-size: 35px;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-left: 60px;
+  transition: transform 0.3s ease-in-out;
+}
+.navbar h1:hover {
+  transform: scale(1.2);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.nav-links a:hover {
+  color: #b89c83;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 0 5px 0;
+}
+
+/* Image Container with Border */
+.image-container {
+  border: 30px solid #d8c5b4; /* Border color */
+  padding: 0px;
+  display: inline-block;
+  background: white; /* Background behind the image */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Social Icons Section */
+.social-icons {
+  display: flex;
+  margin-right: 60px;
+  justify-content: right;
+  align-items: center;
+  gap: 40px;
+  padding: 10px;
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 22px; /* Adjust size */
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.icon:hover {
+  transform: scale(1.2); /* Slightly increase size on hover */
+  color: #555;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px 50px 50px
+  background-color: white;
+}
+
+/* Container for Avatar + Text */
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  gap: 30px;
+}
+
+/* Move Avatar to the Left */
+.avatar {
+  flex-shrink: 0; /* Prevents image from resizing */
+  margin-right: auto; /* Pushes image to the left */
+}
+
+.avatar img {
+  width: 300px; /* Adjust size */
+  height: 300px; /* Keep it square */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Ensure it maintains proper ratio */
+  border: 5px solid #ffffff; /* Optional border */
+}
+
+/* Text Content */
+.about-text {
+  flex: 1; /* Takes up remaining space */
+  text-align: justify;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
+.about-text h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.about-text p {
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .overlay-text {
+    padding: 10px;
+    max-width: 90%;
+  }
+  .overlay-text h1 {
+    font-size: 2rem;
+  }
+  .overlay-text p {
+    font-size: 1rem;
+  }
+}
